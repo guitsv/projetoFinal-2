@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input 
+        type="email" 
+        placeholder="exemplo@email.com" 
+        [(ngModel)]="email" 
+        name="email" 
+        required>
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input 
+        type="password" 
+        placeholder="********" 
+        [(ngModel)]="password" 
+        name="password" 
+        required>
+      </ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button expand="full" type="submit">Entrar</ion-button>
+    </div>
+  </form>
+</ion-content>
+
+<style>
+  ion-item {
+    margin-bottom: 15px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+  }
+</style>
