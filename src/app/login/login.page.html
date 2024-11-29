@@ -31,6 +31,16 @@
     <div class="button-container">
       <ion-button expand="full" type="submit">Entrar</ion-button>
     </div>
+    
+    <div class="register-container">
+      <ion-button 
+        expand="full" 
+        fill="outline" 
+        color="secondary" 
+        (click)="goToRegister()">
+        Cadastre-se
+      </ion-button>
+    </div>
   </form>
 </ion-content>
 
@@ -41,5 +51,10 @@
 
   .button-container {
     margin-top: 20px;
+  }
+
+  .register-container {
+    margin-top: 15px;
+    text-align: center;
   }
 </style>

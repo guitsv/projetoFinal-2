@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,10 +13,15 @@ export class LoginComponent {
   constructor(private authService: AuthService) {}
 
   login() {
-    this.authService.login(this.email, this.senha);
+    this.authService.loginUser(this.email, this.senha)
+      .then((response) => {
+        console.log('Login bem-sucedido:', response);
+      })
+      .catch((error) => {
+        console.error('Erro ao fazer login:', error);
+      });
   }
 
-  register() {
-    this.authService.register(this.email, this.senha);
+  goToRegister() {
   }
 }

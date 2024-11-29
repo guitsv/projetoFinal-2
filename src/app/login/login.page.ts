@@ -48,4 +48,8 @@ export class LoginPage {
     });
     await alert.present();
   }
+
+  goToRegister() {
+    this.router.navigate(['/cadastro']);
+  }
 }
